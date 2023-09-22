@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submarine Game</title>
+    <style>
+        body {
+            align-items: center;
+        }
+
+        h1 {
+            position: absolute;
+            top: -38%;
+            left: 20%;
+            text-align: center;
+            padding: 5px;
+            color: darkblue;
+        }
+
+        #info {
+            position: absolute;
+            top: -20%;
+            left: 0%;
+            text-align: center;
+            padding: 10px;
+            color: darkblue;
+        }
+
+        #score {
+            position: absolute;
+            display: block;
+            top: -7%;
+            left: 0%;
+            text-align: center;
+            color: green;
+            font-weight: 700;
+            display: block;
+        }
+
+        #fuel {
+            position: absolute;
+            display: block;
+            top: -7%;
+            right: 0%;
+            text-align: center;
+            color: tomato;
+            font-weight: 700;
+        }
+
+        #computerScore {
+            position: absolute;
+            display: block;
+            top: -7%;
+            left: 35%;
+            text-align: center;
+            color: lightseagreen;
+            font-weight: 700;
+        }
+
+        #grid-container {
+            position: absolute;
+            top: 25%;
+            right: 35%;
+            translate: (-50% -50%);
+        }
+
+        table {
+            border-radius: 5px;
+
+            border-collapse: collapse;
+            background-color: rgb(248, 248, 248);
+
+        }
+
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #start {
+            display: block;
+            background-color: darkblue;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #reset {
+            display: none;
+            background-color: tomato;
+            color: cornsilk;
+            border-radius: 5px;
+        }
+
+        #over {
+            position: absolute;
+            top: -5%;
+            left: 28%;
+            text-align: center;
+            display: none;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 40px;
+            text-shadow: 0.5px 0.5px;
+        }
+
+        #rounds {
+            position: absolute;
+            display: block;
+            bottom: 0%;
+            right: 0%;
+            text-align: center;
+            color: darkblue;
+            font-weight: 700;
+        }
+
+        #outcome {
+            position: absolute;
+            display: block;
+            bottom: 0%;
+            left: 32%;
+            text-align: center;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 25px;
+            text-shadow: 0.5px 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid-container">
+        <h1>Submarine Game</h1>
+        <label id="info">Place your submarine (u), robotic killer submarines (k), obstacles (o), and fuel cans (5-9) on
+            the grid.Then click Start:</label>
+        </br>
+        <label id="score">Score: 0</label>
+        <label id="fuel">Fuel Levels: 0</label>
+        <table id="grid">
+            <script>
+                gameStarted = false;
+                for (var i = 0; i < 10; i++) {
+                    document.write("<tr>");
+                    for (var j = 0; j < 10; j++) {
+                        if (gameStarted === false) {
+                            document.write("<td onclick='selectCell(this)'></td>");
+                        }
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+        </table>
+        <br>
+        <button id="start" onclick="startGame()">Start Game</button>
+        <button id="reset" onclick="window.location.reload()">Reset Game</button>
+        <label id="computerScore">Computer Score: 0</label>
+        <label id="over">Game over</label>
+        <label id="rounds">Round: 0</label>
+        <label id="outcome"></label>
+        <script src="game.js"></script>
+    </div>
+</body>
+
+</html>
