@@ -1,5 +1,7 @@
 # Submarine Game
 A game about Submarines Developed using Javascript. Deployed live [here!](https://subgame.onrender.com/game)
+<img width="544" alt="Screenshot 2023-09-23 at 22 58 50" src="https://github.com/ebin-sabu/SubmarineGame/assets/49438210/6222bc98-a7a5-4295-b0be-eb245ac54823">
+
 
 ## Setting up the Game:
 The game always starts in the setup stage. During the setup stage, the user is shown the grid and can place four different types of objects on the cells of the grid:
