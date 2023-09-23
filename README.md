@@ -3,7 +3,7 @@ A game about Submarines Developed using Javascript. Deployed live [here!](https:
 
 
 
-<img width="544" positon = "center" alt="Screenshot 2023-09-23 at 22 58 50" src="https://github.com/ebin-sabu/SubmarineGame/assets/49438210/6222bc98-a7a5-4295-b0be-eb245ac54823">
+<img width="700" positon = "center" alt="Screenshot 2023-09-23 at 22 58 50" src="https://github.com/ebin-sabu/SubmarineGame/assets/49438210/6222bc98-a7a5-4295-b0be-eb245ac54823">
 
 
 ## Setting up the Game:
